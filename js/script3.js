@@ -6,11 +6,15 @@ arr1.sort((a, b) => a - b);
 console.log(arr1);
 
 // Task 14
-let sumArrElem = 0;
-arr2.forEach(item => sumArrElem += item);
+// let sumArrElem = 0;
+// arr2.forEach(item => sumArrElem += item);
+// console.log(sumArrElem);
 
+const sumArrElem = arr2.reduce(function(previousValue, item, index, array) {
+    return item + previousValue;
+}, 0)
 console.log(sumArrElem);
 
 // Task 15
-arr2.map((item, index, arr) => arr[index] = Math.pow(item, 2));
+arr2.forEach((item, index, arr) => arr[index] = Math.pow(item, 2));
 console.log(arr2);  
